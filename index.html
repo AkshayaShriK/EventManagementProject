@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Management & RSVP</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Event RSVP System</h1>
+
+    <!-- RSVP Form -->
+    <form id="rsvpForm">
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <button type="submit">RSVP</button>
+    </form>
+
+    <!-- Confirmation Step -->
+    <div id="confirmationStep" class="hidden">
+      <h3>Enter Confirmation Code</h3>
+      <input type="text" id="confirmCode" placeholder="Enter code" required>
+      <button id="verifyBtn">Verify</button>
+    </div>
+
+    <p id="status"></p>
+
+    <!-- Dashboard -->
+    <h2>📋 Attendee Dashboard</h2>
+    <select id="filter">
+      <option value="all">All</option>
+      <option value="pending">Pending</option>
+      <option value="confirmed">Confirmed</option>
+    </select>
+
+    <ul id="attendeeList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
